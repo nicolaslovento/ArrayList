@@ -1,0 +1,53 @@
+int aux;
+    int i;
+    ArrayList *lista;
+    //hacer un malloc para que apunte a una direccion de memoria.keep.
+    lista=al_newArrayList();//le pide memoria para usar el arraylist
+
+    Employee* e1;
+    e1=(Employee*)malloc(sizeof(Employee));//apunta al heap
+    //cargamos estructura.
+    e1->id=666;
+    strcpy(e1->name,"z");
+    strcpy(e1->lastName,"Gomez");
+    e1->isEmpty=1;
+
+    //agregar la estructura al arraylist
+    //agregar al arrayl.ist la direccion de memoria
+    al_add(lista,e1);
+    aux=al_len(lista);//lee la cantidad de elementos que estan guardados
+    //devuelve el size.
+    //printf("Size del arraylist: %d\n",aux);
+
+
+    //Mostrar estructura.
+    //devuelve puntero
+    Employee* eAux;
+    //eAux=(Employee*)al_get(lista,0);
+    //no hace falta hacer malloc ya que le devuelve la estructura con memoria ya reservada,.
+    //employee_print(eAux);
+
+
+
+    Employee* e2;
+    e2=(Employee*)malloc(sizeof(Employee));//apunta al heap
+    //cargamos estructura.
+    e2->id=222;
+    strcpy(e2->name,"a");
+    strcpy(e2->lastName,"Gutierrez");
+    e2->isEmpty=1;
+
+    al_add(lista,e2);
+
+    //employee_print(eAux);
+    aux=al_len(lista);
+
+    aux=employee_compare(e1,e2);
+    printf("%d",aux);
+    //pasamos el nombre de la funcion.
+    al_sort(lista,employee_compare,1);
+    for(i=0;i<2;i++)
+    {
+        eAux=(Employee*)al_get(lista,i);
+        employee_print(eAux);
+    }
