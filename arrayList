@@ -1,7 +1,7 @@
 int aux;
     int i;
     ArrayList *lista;
-    //hacer un malloc para que apunte a una direccion de memoria.keep.
+    //hacer un malloc para que apunte a una direccion de memoria.heap.
     lista=al_newArrayList();//le pide memoria para usar el arraylist
 
     Employee* e1;
