@@ -1,0 +1,7 @@
+//permiten agregar y borrar elementos del arraylist
+
+pop- lo saca de la lista y lo asigna a otro//llama al remove
+remove- elimina un elemento del array 
+push-coloco entre dos elementos//puede llamar al add
+set -reemplazo el valor//puede llamar al add-
+add- agrega al final.
